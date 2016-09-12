@@ -7,9 +7,9 @@ import com.wesleyreisz.rockpaperscissors.R;
  * Created by wesleyreisz on 9/13/15.
  */
 public class GameUtils {
-    public static final String BEATS = "Player beats computer";
-    public static final String LOSES_TO = "Player loses to computer";
-    public static final String TIES = "Player ties computer";
+    public static final String BEATS = "beats by DR.DRE";
+    public static final String LOSES_TO = "loses to";
+    public static final String TIES = "ties";
 
     public static Integer getComputerChoice(){
         /*
@@ -55,9 +55,8 @@ public class GameUtils {
             // PLAYER TIES TO COMP.
             return TIES;
         }
-
-
     }
+
 
     public static Integer convertButtonToImage(Integer buttonChoice) {
         if(buttonChoice==R.id.btnRock){
