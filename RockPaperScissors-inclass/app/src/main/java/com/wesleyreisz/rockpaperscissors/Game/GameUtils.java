@@ -7,9 +7,9 @@ import com.wesleyreisz.rockpaperscissors.R;
  * Created by wesleyreisz on 9/13/15.
  */
 public class GameUtils {
-    public static final String BEATS = "beats";
-    public static final String LOSES_TO = "loses to";
-    public static final String TIES = "ties";
+    public static final String BEATS = "Player beats computer";
+    public static final String LOSES_TO = "Player loses to computer";
+    public static final String TIES = "Player ties computer";
 
     public static Integer getComputerChoice(){
         /*
@@ -27,9 +27,36 @@ public class GameUtils {
          TODO: Implement the logic for each of the game types to determine the winner.
          */
 
-        //logic goes here
+        if (playerSelectedChoice==R.id.btnPaper && computerSelectedChoice==R.id.btnRock) {
+            // PLAYER BEATS COMP.
+            return BEATS;
+        } else if(playerSelectedChoice==R.id.btnPaper && computerSelectedChoice==R.id.btnScissors) {
+            // PLAYER LOSES TO COMP.
+            return LOSES_TO;
+        } else if(playerSelectedChoice==R.id.btnPaper && computerSelectedChoice==R.id.btnPaper) {
+            // PLAYER TIES TO COMP.
+            return TIES;
+        } else if(playerSelectedChoice==R.id.btnRock && computerSelectedChoice==R.id.btnScissors) {
+            // PLAYER BEATS COMP.
+            return BEATS;
+        } else if(playerSelectedChoice==R.id.btnRock && computerSelectedChoice==R.id.btnPaper) {
+            // PLAYER LOSES TO COMP.
+            return LOSES_TO;
+        } else if(playerSelectedChoice==R.id.btnRock && computerSelectedChoice==R.id.btnRock) {
+            // PLAYER TIES TO COMP.
+            return TIES;
+        } else if(playerSelectedChoice==R.id.btnScissors && computerSelectedChoice==R.id.btnPaper) {
+            // PLAYER BEATS COMP.
+            return BEATS;
+        } else if(playerSelectedChoice==R.id.btnScissors && computerSelectedChoice==R.id.btnRock) {
+            // PLAYER LOSES TO COMP.
+            return LOSES_TO;
+        } else {
+            // PLAYER TIES TO COMP.
+            return TIES;
+        }
 
-        return GameUtils.BEATS;
+
     }
 
     public static Integer convertButtonToImage(Integer buttonChoice) {
@@ -51,5 +78,7 @@ public class GameUtils {
             return Color.BLACK;
         }
     }
+
 }
+
 
