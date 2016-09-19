@@ -63,31 +63,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         intent.putExtra(PLAYER_CHOICE, v.getId());
         startActivity(intent);
 
+        String buttonType = getViewType(v);
+
+        Toast button = Toast.makeText(buttonType + "was clicked");
+        button.show();
 
     }
 
-    public void rockClick(){
-        Toast toast = Toast.makeText(this, "Rock was clicked", Toast.LENGTH_SHORT);
-        toast.show();
+    public String getViewType(View v){
+        switch (v.getId()){
+            case R.id.btnRock :
+                return "Rock";
+            case R.id.btnRock2 :
+                return "Rock";
+            case R.id.btnRock3 :
+                return "Rock";
+            case R.id.btnPaper :
+                return "Paper";
+            case R.id.btnScissors :
+                return "Scissors";
+            case R.id.btnLizard :
+                return "Lizard";
+            case R.id.btnLizard2 :
+                return "Lizard2";
+        }
+
     }
 
-    public void paperClick(){
-        Toast toast = Toast.makeText(this, "Paper was clicked", Toast.LENGTH_SHORT);
-        toast.show();
-    }
-
-    public void scissorsClick(){
-        Toast toast = Toast.makeText(this, "Scissors was clicked", Toast.LENGTH_SHORT);
-        toast.show();
-    }
-
-    public void lizardClick(){
-        Toast toast = Toast.makeText(this, "Lizard was clicked", Toast.LENGTH_SHORT);
-        toast.show();
-    }
-
-    public void spockClick(){
-        Toast toast = Toast.makeText(this, "Spock was clicked", Toast.LENGTH_SHORT);
-        toast.show();
-    }
 }
