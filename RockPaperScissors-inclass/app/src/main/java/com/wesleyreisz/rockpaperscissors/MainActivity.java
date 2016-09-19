@@ -11,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -61,5 +62,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent intent = new Intent(this, GameResultActivity.class);
         intent.putExtra(PLAYER_CHOICE, v.getId());
         startActivity(intent);
+
+
+    }
+
+    public void rockClick(){
+        Toast toast = Toast.makeText(this, "Rock was clicked", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    public void paperClick(){
+        Toast toast = Toast.makeText(this, "Paper was clicked", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    public void scissorsClick(){
+        Toast toast = Toast.makeText(this, "Scissors was clicked", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    public void lizardClick(){
+        Toast toast = Toast.makeText(this, "Lizard was clicked", Toast.LENGTH_SHORT);
+        toast.show();
+    }
+
+    public void spockClick(){
+        Toast toast = Toast.makeText(this, "Spock was clicked", Toast.LENGTH_SHORT);
+        toast.show();
     }
 }

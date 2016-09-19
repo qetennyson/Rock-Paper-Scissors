@@ -5,14 +5,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
 
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLizard"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/lizard"
+        android:layout_centerHorizontal="true"
+        android:onClick="lizardClick"
+        android:layout_marginBottom="-50dp"
+        android:layout_marginTop="-50dp"
+        />
+
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnPaper"
         android:backgroundTint="@android:color/transparent"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_below="@id/btnLizard"
         android:src="@drawable/paper"
+        android:onClick="paperClick"
         />
 
     <ImageButton
@@ -20,9 +35,11 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnRock"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/btnLizard"
         android:src="@drawable/rock"
-        android:layout_above="@id/btnPaper"
+        android:onClick="rockClick"
+
         />
 
     <ImageButton
@@ -30,9 +47,84 @@
         android:layout_height="wrap_content"
         android:id="@+id/btnScissors"
         android:backgroundTint="@android:color/transparent"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/btnLizard"
         android:src="@drawable/scissors"
-        android:layout_below="@id/btnPaper"
+        android:onClick="scissorsClick"
         />
+
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSpock"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/spock"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-28dp"
+        android:onClick="spockClick"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLizard2"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/btnRock"
+        android:layout_marginTop="-40dp"
+        android:src="@drawable/lizard"
+        android:onClick="lizardClick"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRock2"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnPaper"
+        android:layout_marginTop="-60dp"
+        android:src="@drawable/rock"
+        android:onClick="rockClick"
+
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Paper2"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/btnRock2"
+        android:layout_marginTop="-60dp"
+        android:src="@drawable/paper"
+        android:onClick="paperClick"
+
+        />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRock3"
+        android:backgroundTint="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/rock"
+        android:layout_above="@id/btnSpock"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:onClick="rockClick"
+        android:layout_marginBottom="60dp"
+        />
+
+
+
+
+
+
 
 </RelativeLayout>
